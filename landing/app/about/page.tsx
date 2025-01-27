@@ -43,29 +43,43 @@ export default function AboutPage() {
 
         {/* Content Sections */}
         <div className="space-y-12">
-          <SectionBlock
-            icon={<BarChart className="w-6 h-6" />}
-            title="For Organizations"
-            items={[
-              "Automate data collection and verification",
-              "Generate real-time sustainability analytics",
-              "Streamline ESG reporting processes",
-              "Align activities with SDGs effortlessly"
-            ]}
-            delay={0.1}
-          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <SectionBlock
+                icon={<BarChart className="w-6 h-6" />}
+                title="For Organizations"
+                items={[
+                  "Automate data collection and verification",
+                  "Generate real-time sustainability analytics",
+                  "Streamline ESG reporting processes",
+                  "Align activities with SDGs effortlessly"
+                ]}
+              />
+            </motion.div>
 
-          <SectionBlock
-            icon={<Users className="w-6 h-6" />}
-            title="For Individuals"
-            items={[
-              "Map daily activities to SDGs",
-              "Track personal sustainability impact",
-              "Receive AI-driven suggestions",
-              "Contribute to organizational goals"
-            ]}
-            delay={0.2}
-          />
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <SectionBlock
+                icon={<Users className="w-6 h-6" />}
+                title="For Individuals"
+                items={[
+                  "Map daily activities to SDGs",
+                  "Track personal sustainability impact",
+                  "Receive AI-driven suggestions",
+                  "Contribute to organizational goals"
+                ]}
+              />
+            </motion.div>
+          </div>
 
           <FeatureGrid
             title="Key Features"
@@ -75,10 +89,9 @@ export default function AboutPage() {
               { icon: <ShieldCheck />, text: "Automated Reporting" },
               { icon: <Leaf />, text: "SDG Alignment" }
             ]}
-            delay={0.3}
           />
 
-          <BenefitSection delay={0.4} />
+          <BenefitSection />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,18 +115,12 @@ export default function AboutPage() {
   );
 }
 
-const SectionBlock = ({ icon, title, items, delay }: { 
+const SectionBlock = ({ icon, title, items }: { 
   icon: React.ReactNode;
   title: string;
   items: string[];
-  delay: number;
 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay }}
-    className="rounded-2xl border border-blue-100 dark:border-blue-900/50 bg-blue-50/30 dark:bg-blue-900/20 p-8"
-  >
+  <div className="h-full rounded-2xl border border-blue-100 dark:border-blue-900/50 bg-blue-50/30 dark:bg-blue-900/20 p-8">
     <div className="flex items-center gap-3 mb-4">
       <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30">{icon}</div>
       <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">{title}</h2>
@@ -126,20 +133,14 @@ const SectionBlock = ({ icon, title, items, delay }: {
         </li>
       ))}
     </ul>
-  </motion.div>
+  </div>
 );
 
-const FeatureGrid = ({ title, features, delay }: { 
+const FeatureGrid = ({ title, features }: { 
   title: string;
   features: FeatureItem[];
-  delay: number;
 }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay }}
-    className="rounded-2xl border border-blue-100 dark:border-blue-900/50 bg-blue-50/30 dark:bg-blue-900/20 p-8"
-  >
+  <div className="rounded-2xl border border-blue-100 dark:border-blue-900/50 bg-blue-50/30 dark:bg-blue-900/20 p-8">
     <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">{title}</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {features.map(({ icon, text }, idx) => (
@@ -149,16 +150,11 @@ const FeatureGrid = ({ title, features, delay }: {
         </div>
       ))}
     </div>
-  </motion.div>
+  </div>
 );
 
-const BenefitSection = ({ delay }: { delay: number }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay }}
-    className="rounded-2xl border border-blue-100 dark:border-blue-900/50 bg-blue-50/30 dark:bg-blue-900/20 p-8"
-  >
+const BenefitSection = () => (
+  <div className="rounded-2xl border border-blue-100 dark:border-blue-900/50 bg-blue-50/30 dark:bg-blue-900/20 p-8">
     <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Key Benefits</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="flex items-center gap-3 p-4 rounded-lg bg-white dark:bg-gray-800">
@@ -198,5 +194,5 @@ const BenefitSection = ({ delay }: { delay: number }) => (
         </div>
       </div>
     </div>
-  </motion.div>
+  </div>
 );
