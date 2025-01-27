@@ -32,7 +32,7 @@ export default function Page() {
             >
               <div className="flex items-center gap-2 text-sm font-medium text-blue-900 dark:text-blue-200">
                 <Sparkles className="h-4 w-4" />
-                <span> We're Here to Help</span>
+                <span> We&apos;re Here to Help</span>
               </div>
             </motion.div>
             
