@@ -17,6 +17,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "frontforumfocus",
   description: "Sustainability reporting made simple.",
+  icons: {
+    icon: [
+      {
+     
+        url: '/f3.svg',
+        href: '/f3.svg',
+      },
+  
+    ],
+  },
+
+
 };
 
 export default function RootLayout({

@@ -75,7 +75,7 @@ export function Navbar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="https://linkedin.com/in/georgekarani"
+                  href="https://linkedin.com/company/frontforumfocus"
                   target="_blank"
                   className="p-3 rounded-full hover:bg-accent transition-colors"
                 >
