@@ -70,8 +70,8 @@ export default function HeroSection() {
 
           <Link
             href="/about"
-            target="_blank"
-            aria-label="Join Discord (opens in a new tab)"
+           
+            aria-label="Learn more (opens in a new tab)"
           >
             <Button
               variant="outline"

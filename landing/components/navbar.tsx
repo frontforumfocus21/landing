@@ -43,7 +43,8 @@ export function Navbar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="/blog"
+                  href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7037428303808315392"
+                  target="_blank"
                   className="p-3 rounded-full hover:bg-accent transition-colors"
                 >
                   <PenSquare className="h-5 w-5" />
