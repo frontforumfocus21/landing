@@ -20,6 +20,7 @@ export async function submitWaitlistForm(
   try {
     const response = await fetch(
       "https://app.router.so/api/endpoints/gh79a7ud",
+      
       {
         method: "POST",
         headers: {
