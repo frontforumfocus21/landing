@@ -1,8 +1,10 @@
 "use client";
-import { Sparkles, BarChart,  Clock, ShieldCheck, Users, Leaf } from "lucide-react";
+import { Sparkles, BarChart,  Clock, ShieldCheck, Users, Leaf, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Iphone15Pro from "@/components/iphone-15-pro";
+import Android from "@/components/android";
 
 interface FeatureItem {
   icon: React.ReactNode;
@@ -41,6 +43,59 @@ export default function AboutPage() {
           </h1>
         </motion.div>
 
+        {/* Updated Android section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="group relative rounded-3xl bg-gradient-to-br from-blue-50 to-white dark:from-blue-900/20 dark:to-gray-900 shadow-xl overflow-hidden"
+        >
+          <div className="flex flex-col md:flex-row gap-8 p-8">
+            {/* iPhone Section */}
+            <div className="md:w-1/2 lg:w-1/3 shrink-0">
+              <div className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-inner">
+                <Iphone15Pro
+                  className="w-full h-auto rounded-[20px] border-4 border-white dark:border-gray-700"
+                  src="/Frame.png"
+                />
+              </div>
+            </div>
+
+            {/* Individuals Content */}
+            <div className="flex-1 space-y-6">
+              <div className="flex items-center gap-3">
+                <Users className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-900 dark:from-blue-400 dark:to-blue-200">
+                  For Individuals
+                </h2>
+              </div>
+              
+              <ul className="grid gap-4">
+                {[
+                  "Map daily activities to SDGs",
+                  "Track personal impact metrics",
+                  "AI-driven sustainability suggestions",
+                  "Contribute to organizational goals"
+                ].map((item, idx) => (
+                  <li 
+                    key={idx}
+                    className="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <span className="flex-1 text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+         
+            </div>
+          </div>
+
+          {/* Decorative Gradient */}
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(at_top_right,_var(--tw-gradient-stops))] from-blue-100/50 to-transparent dark:from-blue-900/20" />
+        </motion.div>
+        
         {/* Content Sections */}
         <div className="space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -62,23 +117,7 @@ export default function AboutPage() {
               />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <SectionBlock
-                icon={<Users className="w-6 h-6" />}
-                title="For Individuals"
-                items={[
-                  "Map daily activities to SDGs",
-                  "Track personal sustainability impact",
-                  "Receive AI-driven suggestions",
-                  "Contribute to organizational goals"
-                ]}
-              />
-            </motion.div>
+        
           </div>
 
           <FeatureGrid
