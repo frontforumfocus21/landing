@@ -1,10 +1,10 @@
 "use client";
-import { Sparkles, BarChart,  Clock, ShieldCheck, Users, Leaf, ArrowUpRight } from "lucide-react";
+import { Sparkles, BarChart,  Clock, ShieldCheck, Users, Leaf } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Iphone15Pro from "@/components/iphone-15-pro";
-import Android from "@/components/android";
+
 
 interface FeatureItem {
   icon: React.ReactNode;
