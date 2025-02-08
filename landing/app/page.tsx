@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight,  Sparkles } from "lucide-react";
+import { ArrowRight, Contact,  Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../components/ui/button";
 import { motion } from "motion/react";
@@ -83,15 +83,15 @@ export default function HeroSection() {
             </Button>
           </Link>
 
-        { /*  <Link 
-            href="/contact"
+          <Link 
+            href="https://cal.com/georgekarani/30min"
             target="_blank"
             className="flex items-center gap-2 rounded-full px-6 py-2 h-12 border-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            aria-label="View on GitHub"
+            aria-label="Book a Demo (opens in a new tab)"
           >
             <Contact className="w-5 h-5" aria-hidden="true" />
-            <span>Contact us</span>
-          </Link> */ }
+            <span>Book a Demo</span>
+          </Link> 
         </motion.div>
       </div>
     </section>
