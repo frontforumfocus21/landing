@@ -1,0 +1,3 @@
+export const production = {"ROUTER_API_KEY":"bdfe64189dcb7fd28303bc09037de27a1168507e3622f584cf9b67794951f991"};
+export const development = {"ROUTER_API_KEY":"bdfe64189dcb7fd28303bc09037de27a1168507e3622f584cf9b67794951f991"};
+export const test = {"ROUTER_API_KEY":"bdfe64189dcb7fd28303bc09037de27a1168507e3622f584cf9b67794951f991"};
