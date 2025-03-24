@@ -2,6 +2,7 @@
   "name": "landing",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.10.0",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -55,4 +56,6 @@
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0"
   }
+  
+
 }
